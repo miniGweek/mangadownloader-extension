@@ -1,0 +1,42 @@
+{
+    "name": "Manga/Manhwa Zipper",
+    "version": "1.0",
+    "description": "Download Manga or Manhwa as a zip",
+    "manifest_version": 2,
+    "permissions": ["https://www.webtoon.xyz/read/*",
+        "https://toonily.net/manga/*",
+        "declarativeContent",
+        "activeTab"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+      "content_scripts": [
+        {
+          "matches": ["https://www.webtoon.xyz/read/*"],
+          "css": ["mangaDownloader.css"],
+          "js": [
+                  "lib/jquery-3.5.1.min.js",
+                  "lib/JSZip.min.js",
+                  "lib/JSZipUtils.min.js",
+                  "lib/FileSaver.js",
+                  "mangaDownloader.js"
+                ],
+          "run_at": "document_idle"
+        }
+      ],
+      "page_action": {
+        "default_icon": {
+          "16": "images/get_started16.png",
+          "32": "images/get_started32.png",
+          "48": "images/get_started48.png",
+          "128": "images/get_started128.png"
+        }
+      },
+      "icons": {
+        "16": "images/get_started16.png",
+        "32": "images/get_started32.png",
+        "48": "images/get_started48.png",
+        "128": "images/get_started128.png"
+      }
+  }
