@@ -11,7 +11,7 @@
       },
       "content_scripts": [
         {
-          "matches": ["https://www.webtoon.xyz/read/*"],
+          "matches": ["https://www.webtoon.xyz/read/*","https://toonily.net/manga/*"],
           "css": ["mangaDownloader.css"],
           "js": [
                   "lib/jquery-3.5.1.min.js",
