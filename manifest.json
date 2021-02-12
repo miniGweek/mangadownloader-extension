@@ -4,9 +4,7 @@
     "description": "Download Manga or Manhwa as a zip",
     "manifest_version": 2,
     "permissions": ["https://www.webtoon.xyz/read/*",
-        "https://toonily.net/manga/*",
-        "declarativeContent",
-        "activeTab"],
+        "https://toonily.net/manga/*"],
     "background": {
         "scripts": ["background.js"],
         "persistent": false
